@@ -5,52 +5,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Calculator!</title>
+  <!DOCTYPE html>
+  <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+  <html class="no-js" lang="en" >
 
-  <link rel="stylesheet" href="static/normalize.css">
-  <link rel="stylesheet" href="static/foundation.css">
-  <link rel="stylesheet" href="static/app.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator!</title>
 
-  <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="static/normalize.css">
+    <link rel="stylesheet" href="static/foundation.css">
+    <link rel="stylesheet" href="static/app.css">
 
-</head>
-  <body>
-    <div class="row page-header">
-      <div class="columns text-center">
-        <div id='container'>
-          <div class="">
-            <h1>There was an error, you tried to divide by zero!</h1>
-          </div>
-          <div id='content'>
-            <form method='POST' action="/calculated">
-              <label for='number_one'>Please enter the first number:</label>
-              <input type='float' name='first_number' id="number_one" /><br />
-              <br></br>
-              <div class='operator'>
-                <label for="operator">Please select an operator: </label>
-                <select name="operator">
-                  <option value="+">+</option>
-                  <option value="-">-</option>
-                  <option value="x">x</option>
-                  <option value="/">/</option>
-                  <option value="%">%</option>
-                  <option value="^">^</option>
-                </select>
+    <script src="js/vendor/modernizr.js"></script>
+
+  </head>
+    <body>
+      <div class="row page-header">
+        <div class="columns text-center">
+          <div id='container'>
+            <div class="">
+              <h1>There was an error, you tried to divide by zero!</h1>
+            </div>
+            <div id='content'>
+              <form method='POST' action="/calculated">
+                <label for='number_one'>Please enter the first number:</label>
+                <input type='float' name='first_number' id="number_one" /><br />
                 <br></br>
-              </div>
-              <label for='number_two'>Please enter the second number:</label>
-              <input type='float' name='second_number' id ="number_two" /><br />
-              <br></br>
-              <input type='submit' class="tiny button" value="Calculate!" />
-            </form>
+                <center>
+                <div class='large-4 center'>
+
+                  <label for="operator">Please select an operator: </label>
+                  <select name="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="x">x</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                    <option value="^">^</option>
+                  </select>
+                </center>
+                  <br></br>
+                </div>
+                <label for='number_two'>Please enter the second number:</label>
+                <input type='float' name='second_number' id ="number_two" /><br />
+                <br></br>
+                <input type='submit' class="tiny button" value="Calculate!" />
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
-</html>
+      <script src="js/vendor/jquery.js"></script>
+      <script src="js/foundation.min.js"></script>
+      <script>
+        $(document).foundation();
+      </script>
+    </body>
+  </html>
